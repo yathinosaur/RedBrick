@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -18,7 +20,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String phoneNumber = "4168548536";
+    String phoneNumber = null;
     final String url ="http://129.21.70.129:8081/mason/get";
     //final String url = "http://10.0.2.124:8081/mason/get";
 
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Allergy Alert");
+
+        EditText phoneNumberView = (EditText)findViewById(R.id.phone);
+        phoneNumber = phoneNumberView.getText().toString();
 
     }
 
@@ -137,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     public void dialPhoneNumber(String phoneNumber) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:" + phoneNumber));
@@ -146,5 +153,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void phoneButtonClick(View view) {
+        EditText phoneView = (EditText)findViewById(R.id.phone);
 
+        if(phoneView.getText().toString().length() != 9) {
+            phoneNumber = "911";
+        } else {
+            phoneNumber = phoneView.getText().toString();
+
+        }
+    }
 }
