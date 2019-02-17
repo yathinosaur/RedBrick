@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
-    <h1 class = "fontverd title">{{ msg }}</h1>
+    <!-- <h1 class = "fontverd title">{{ msg }}</h1> -->
+    <svg width = "1300" height = "170">
+      <rect width="1300" height="170" x="-100" y="0" style="fill:rgb(255,0,0);"/>
+    </svg><br><br>
     <input type="text" name="firstname" class = "firstletteruppercase fontverd textbox" v-model="user">
     <button value="Submit" class = "button fontverd" v-on:click="update()">Select User</button><br><br><br><br>
     <div class="w600 w3-container container row">
