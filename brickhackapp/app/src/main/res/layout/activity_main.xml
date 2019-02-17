@@ -51,14 +51,15 @@
                 android:inputType="text"
                 android:text="4168548536" />
 
-            <Button
-                android:id="@+id/phoneButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:onClick="phoneButtonClick"
-                android:text="Update" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/phoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:onClick="phoneButtonClick"
+            android:text="Update" />
 
 
     </LinearLayout>
