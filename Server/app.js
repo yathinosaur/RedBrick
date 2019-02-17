@@ -35,6 +35,7 @@ app.post('/:id/update', function(req, res) {
     // res.end(JSON.stringify({
     //     str(req.params.id): 
     // }))
+    res.end(req.params.id + " updated")
 })
 
 app.post('/newId', function(req, res) {
@@ -43,7 +44,8 @@ app.post('/newId', function(req, res) {
         "histamine_concentration": req.body.histamine_concentration,
         "core_body_temperature": req.body.core_body_temperature,
         "safe": req.body.safe
-    }
+    },
+    res.end("new Id " + req.body.id + " created")
 })
 
 var server = app.listen(8081, function(){
