@@ -50,51 +50,6 @@ public class MainActivity extends AppCompatActivity {
         //Instatiate the request queue
         final RequestQueue queue = Volley.newRequestQueue(this);
 
-        /*
-        //  -------NONE AUTO UPDATE
-        //instantiate JsonObject
-        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-
-            @Override
-            public void onResponse(JSONObject response) {
-                // TODO Auto-generated method stub
-                try {
-
-                    //In Case: No wifi
-                    if( bloodPressureView.getText().toString().equals("Blood Pressure: " + response.getString("blood_pressure"))) {
-                        bloodPressureView.setText("Blood Pressure: " + response.getString("blood_pressure")
-                        + "    No Update Recently: Potential Loss of Connection");
-                    } else {
-                        bloodPressureView.setText("Blood Pressure: " + response.getString("blood_pressure"));
-
-                    }
-                    histamineView.setText("Histamine Concentration: " + response.getString("histamine_concentration"));
-                    bodyTempView.setText("Core Body Temperature: " + response.getString("core_body_temperature"));
-                    safeView.setText("Safe: " + response.getString("safe"));
-
-                    //call if not safe
-                    //getText returns a charSequence
-                    if(safeView.getText().toString().equals("Safe: false")) {
-                        safeView.setTextColor(Color.RED);
-                        dialPhoneNumber(phoneNumber);
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // TODO Auto-generated method stub
-            }
-        });
-
-        queue.add(jsObjRequest);
-
-
-        */
-
         /**
          * new PeriodicTask object, run() holds the code to run when startUpdates() is run
          */
