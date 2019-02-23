@@ -1,5 +1,5 @@
 # RedBrick
-An integrated system to detect and respond to a live-threatening allergic reaction. 
+An integrated system to detect and respond to a life-threatening allergic reaction. 
 Monitors three indicators of anaphylactic shock:
   - Histamine levels in the blood
   - Blood pressure
